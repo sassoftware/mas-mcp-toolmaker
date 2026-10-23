@@ -1,141 +1,162 @@
-<!--
-Use this template to structure your project's README.md file.
-Not all sections are required, though we recommend including as many as possible.
+# SAS Micro Analytic Service (MAS) - Model Context Protocol (MCP) Tool Maker
+ 
+## mas-mcp-toolmaker
 
-* Project name (required)
-* Overview (required)
-  * What's new (optional)
-  * Prerequisites (optional)
-* Installation (required)
-  * Getting Started (optional)
-  * Running (optional)
-  * Examples (optional)
-  * Troubleshooting (optional)
-* Contributing (required)
-* License (required)
-* Third-Party Dependencies (required)
-* Additional Resources (required)
+> [!NOTE]
+> 📢 
+> *A Model Context Protocol (MCP) Server Script for your SAS Viya Micro Analytic Service (MAS) modules.*
 
-Consider using a table of contents to make lengthy and complex README files easier to navigate.
--->
-
-# PROJECT_NAME
-<!--
-Replace `PROJECT_NAME` with your project's name.
-Your project's name is the first thing people will see when browsing your project.
--->
 
 ## Overview
-<!--
-Include a brief project description, written from the perspective of the value your project provides users.
-Be sure to define terms; links to resources where necessary and appropriate.
-A good overview is clear, short, and to the point.
--->
+The Python package in this repository generates a Model Context Protocol (MCP) server script to execute published [SAS Micro Analytic Services (MAS)](https://support.sas.com/en/software/micro-analytic-service-support.html) modules. 
 
-### What's New
-<!--
-If applicable to your project, list new features you want users to be aware of.
-This section might supplement the Changelog file from the repository and only highlight important changes.
--->
+The output Python script comes with a choice of two flavours - an MCP server served through stdio, or a format customised for [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.htmlhttps://www.sas.com/en_us/software/retrieval-agent-manager.html). A third Streamable HTTP version is planned.
+
+<mark> Python package at: https://pypi.org/project/mas-mcp-toolmaker/ </mark>
+
+A wiki of this repo has been generated using DeepWiki and is available here: [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/SundareshSankaran/mas-mcp-toolmaker)
+
+
+### But, Why?
+
+MCP tools can bloat your agents pretty quickly. You need specialist, relevant tools which you can pick and choose as per need. `mas-mcp-toolmaker` helps you do this.  This open-source package is a convenient way to interface with a SAS Viya environment using Model Context Protocol (MCP).  
+
+> 📢 
+> Read this 
+[article](https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21) to learn more.
+> Also watch this [video](https://players.brightcove.net/3665946608001/default_default/index.html?videoId=6399384694112).
 
 ### Prerequisites
-<!--
-Provide guidelines on any prerequisites that may be useful in configuring the user's environment.
-Prerequisites typically take the form of a list of required software that must be available.
-Each piece of software might require its own setup steps.
-Use lists and subtopics as appropriate.
--->
+
+1. Package requirements: Python 3.12 or later
+
+2. Access to a licensed [SAS Viya](https://www.sas.com/en_us/software/viya.html) environment with SAS Micro Analytic Service (MAS).  This is typically a SAS Viya Enterprise or SAS Viya Advanced offering. 
+   - While this repo is open sourcce, SAS Viya is proprietary software from [SAS Institute](https://www.sas.com/). Running SAS Viya requires a license and functioning credentials.
+
+3. The Viya host and an Access token (details in [Installation](#installation)) to connect to the same, set through the following environment variables.
+
+```bash
+VIYA_HOST = 
+VIYA_ACCESS_TOKEN = 
+```
+
+A sample [.env](./sample.env) is also provided.
+
+4. (Optional) Access to [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.htmlhttps://www.sas.com/en_us/software/retrieval-agent-manager.html) if you want to run the RAM flavour of the MCP server script.
+
 
 ## Installation
-<!--
-Provide step-by-step instructions for installing your software project.
-Use subtopics and screenshots as appropriate.
--->
+
+1. While not mandatory, we recommended standing up a virtual environment before installing this package.  A convenient shell script [`build.sh`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/build.sh) is provided for this purpose.  Refer this [repository](https://github.com/SundareshSankaran/build-script) for a starter build script.  Also read this [article](https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674) for more details.
+
+2. The simplest way is to pip install this package from pypi.org
+```
+pip install mas-mcp-toolmaker
+```
+
+3. In case you would like to perform a local install,
+```
+# After cloning this repository and entering the top-level directory.
+
+pip install -e .
+```
+
+4. Use a .env file (refer [`sample.env`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/sample.env), create a copy and rename to `.env`) to set environment variables for the following:
+   (Refer this link for more details on obtaining access tokens: [Authentication to SAS Viya: a couple of approaches](https://blogs.sas.com/content/sgf/2023/02/07/authentication-to-sas-viya/))
+   - VIYA_HOST: A URL pointing to your SAS Viya environment
+   - VIYA_ACCESS_TOKEN: An access token which helps you authenticate to SAS Viya
+
+#### Note: Maintenance utility for VS Code users
+
+For those who would like to use this repository in Visual Studio Code, the [`.vscode`](./.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) everytime you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
+
 
 ### Getting Started
-<!--
-Provide users with initial steps for getting started using your project after they have installed it.
-This is a good place to include screenshots, animated GIFs, or short example videos.
--->
 
-### Running
-<!--
-Provide users with steps for running your project after they have installed it.
-This is a good place to include screenshots, recordings, or short usage videos.
--->
+Run the following example notebook: [`mas-mcp-toolmaker.ipynb`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/mas-mcp-toolmaker.ipynb).
 
-### Examples
-<!--
-Provide additional examples of using the software, or point to further documentation. 
-Make learning and using your project as easy as possible!
--->
+```bash
+# if using virtual environment (use Windows equivalent where applicable)
+cd build
+. buildproj/bin/activate
+jupyter-lab
+```
 
-### Troubleshooting
-<!--
-Provide workarounds and solutions to known problems.
-Organize troubleshooting information using subtopics, as appropriate.
--->
+
+### Operations
+
+Using this package is very simple.  At a fundamental level, there are two operations involved. 
+
+1. Generating a list of MAS modules from a SAS Viya environment
+
+```python
+from mas_mcp_toolmaker import MASModule
+
+masm = MASModule()
+
+```
+
+2. Writing the extracted modules in tool representation to an MCP server script of your chosen flavour.
+
+```python
+masm.script_stdio_server("your_server_file.py")
+
+# or, if you wish to write to a Retrieval Agent Manager file 
+
+masm.script_ram_server("your_ram_server_file.py")
+```
+
+Refer the notebook for other functions.
+
+
+
+### Troubleshooting & Support
+
+Use the [Issues](https://github.com/sassoftware/mas-mcp-toolmaker/issues) page for raising any questions and feature requests.  
 
 ## Contributing
-<!--
-Specify whether your project accepts contributions.
-Language you use in this section should mirror the language in your CONTRIBUTING.md file.
-Use the default text below if you accept contributions.
-If you do not accept contributions, note that here.
--->
 
-<!-- Use this text if your project is not accepting contributions.-->
-Maintainers are not currently accepting patches and contributions to this project.
+Maintainers are not currently accepting patches and contributions to this project.  
 
-<!--Use this text if your project is accepting contributions.-->
-Maintainers are accepting patches and contributions to this project.
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details about submitting contributions to this project.
+However, you are free to ask for a feature or raise bugs using the [Issues](https://github.com/sassoftware/mas-mcp-toolmaker/issues) page mentioned above and we'd love to get in touch and engage more. 
+
 
 ## License
-<!--
-Choose from the default text already in place below.
-Do not alter the text without prior approval from SAS Legal and the Open Source Program Office.
--->
 
 This project is licensed under the [Apache 2.0 License](LICENSE).
 
-<!--
-Substitute the text below if your project contains trademarked elements not intended for license under the open source license.
-In this case, add all trademarked images to the same folder and replace `XXX` in the statement with the name of that folder.
--->
-Except for the the contents of the `XXX` folder, this project is licensed under the [Apache 2.0 License](LICENSE). Elements in the `XXX` folder are owned by SAS and are not released under an open source license. SAS and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration.
+Python packages may contain dependencies on other third-party packages which are governed by their own licenses. 
 
-<!--
-If your projects ships with/as a container image for a package registry, keep the following statement in place.
-Otherwise, remove it.
--->
-As with any container image, direct and indirect dependencies are governed by their own licenses.
-Users of the published container image are responsible for ensuring that their use complies with all applicable licenses.
+Note the dependencies listed below.
+
+1. The [requirements.txt](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/requirements.txt) page (which includes this package).
+2. The package's [pyproject.toml](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/pyproject.toml) page.
+
+Users of this repository are responsible for ensuring that their use complies with all applicable licenses.
 
 ## Third-Party Dependencies
-<!--
-List all third-party dependencies required for using your project, then list and link to each dependency's license.
-Use the table to organize your dependency list.
-Do not include version numbers.
-Consult (and then remove) the provided example.
--->
+
 This project requires the following dependencies.
 
 | Dependency | License |
 | ---------- | ------- |
-| `github.com/sassoftware/dpmm` | [Apache 2.0](https://github.com/sassoftware/dpmm/blob/main/LICENSE) |
+| `github.com/sassoftware/mas-mcp-toolmaker` | [Apache 2.0](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/LICENSE) |
+| `github.com/psf/requests` | [Apache 2.0](https://github.com/psf/requests/blob/main/LICENSE) |
+
 
 ## Additional Resources
-<!--
-Include any additional materials users may need or find useful when using your software. Additional resources might include:
 
-* Documentation links
-* Research papers
-* Blog posts
-* Articles from SAS Communities
-* Other relevant documentation (i.e., from Tech Support, Education, etc.)
--->
+* `https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21`
+* `https://sundareshsankaran.substack.com/p/finding-goldilocks-too-broad-tools` (Substack version in case you run into paywall issues on ai.plainenglish.io)
+* `https://www.youtube.com/watch?v=AVHUgFPfyBQ`
 
-* `Resource link`
-* `Resource link`
-* `Resource link`
+
+## Contact
+   - Sundaresh Sankaran ([email](sundaresh.sankaran@sas.com))
+
+## Version
+   - Version 1.2.1 (04JUL2026)(23OCT2026 - this repo)
+      - First version on `sassoftware`
+   - Version 1.0.0 (13MAY2026)
+
+Refer [`CHANGELOG.md`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/CHANGELOG.md) for a detailed change log including previously hosted repository.
