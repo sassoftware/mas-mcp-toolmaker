@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+# Source contribution from Sundaresh Sankaran (repo author): https://github.com/SundareshSankaran/build-script
+# SPDX-License-Identifier: Apache-2.0
+# https://github.com/SundareshSankaran/build-script/blob/main/LICENSE
+
+ #!/usr/bin/env bash
 
 # Arguments
 

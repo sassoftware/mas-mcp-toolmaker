@@ -1,3 +1,6 @@
+# Copyright © 2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+ 
 # Import tool_name_from_endpoint function
 
 from .get_module_info import tool_name_from_endpoint

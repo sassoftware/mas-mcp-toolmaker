@@ -1,3 +1,6 @@
+# Copyright © 2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+ 
 def get_initial_count(viya_host ="", access_token="" ) -> int:
     import os
     import requests
