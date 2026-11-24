@@ -1,5 +1,6 @@
-# Source contribution from Sundaresh Sankaran (repo author): https://github.com/SundareshSankaran/build-script
+# Copyright © 2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
+# Original source from example - Sundaresh Sankaran (repo author): https://github.com/SundareshSankaran/build-script
 # https://github.com/SundareshSankaran/build-script/blob/main/LICENSE
 # https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674
 
