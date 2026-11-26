@@ -21,4 +21,4 @@ pip install -e .
 
 #### Note: Maintenance utility for VS Code users
 
-For those who would like to use this repository in Visual Studio Code, the [`.vscode`](./.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) everytime you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
+For those who would like to use this repository in Visual Studio Code, the [`.vscode`](https://github.com/sassoftware/mas-mcp-toolmaker/tree/main/.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) everytime you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
