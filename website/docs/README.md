@@ -1,9 +1,12 @@
-# Build custom MCP servers for your SAS Viya decisions and models
+# Build Custom MCP Servers for SAS Viya Decisions and Models
 
 :::info
-> 📢 
-> *A Model Context Protocol (MCP) Server Script for your SAS Viya Micro Analytic Service (MAS) modules.*
-> <mark> Python package at: https://pypi.org/project/mas-mcp-toolmaker/ </mark>
+
+📢 
+*A Model Context Protocol (MCP) Server Script for your SAS Viya Micro Analytic Service (MAS) modules.*
+ 
+<mark> Python package at: https://pypi.org/project/mas-mcp-toolmaker/ </mark>
+
 :::
 
 The Python package in this repository generates a Model Context Protocol (MCP) server script to execute published [SAS Micro Analytic Services (MAS)](https://support.sas.com/en/software/micro-analytic-service-support.html) modules. 
@@ -17,10 +20,12 @@ MCP tools can bloat your agents pretty quickly.
 You need specialised and relevant tools which you can pick and choose as per need. `mas-mcp-toolmaker` helps you do this.  This package is a convenient way to interface with a SAS Viya environment using Model Context Protocol (MCP).  
 
 :::tip
-> 📢 
-> Read this 
+
+📢 
+Read this 
 [article](https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21) to learn more.
-> Also watch this [video](https://players.brightcove.net/3665946608001/default_default/index.html?videoId=6399384694112).
+Also watch this [video](https://players.brightcove.net/3665946608001/default_default/index.html?videoId=6399384694112).
+
 :::
 
 ## MCP Server Options
