@@ -123,7 +123,16 @@ masm.script_ram_server("your_ram_server_file.py")
 Refer the notebook for other functions.
 
 
-### Troubleshooting & Support
+
+## Additional Resources
+
+* [`https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21`](https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21)
+* [`https://sundareshsankaran.substack.com/p/finding-goldilocks-too-broad-tools`](https://sundareshsankaran.substack.com/p/finding-goldilocks-too-broad-tools) (Substack version in case you run into paywall issues on ai.plainenglish.io)
+* [`https://www.youtube.com/watch?v=AVHUgFPfyBQ`](https://www.youtube.com/watch?v=AVHUgFPfyBQ)
+
+  
+
+## Troubleshooting & Support
 
 Use the [Issues](https://github.com/sassoftware/mas-mcp-toolmaker/issues) page for raising any questions and feature requests.  
 
@@ -155,13 +164,6 @@ This project requires the following dependencies.
 | ---------- | ------- |
 | `github.com/sassoftware/mas-mcp-toolmaker` | [Apache 2.0](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/LICENSE) |
 | `github.com/psf/requests` | [Apache 2.0](https://github.com/psf/requests/blob/main/LICENSE) |
-
-
-## Additional Resources
-
-* [`https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21`](https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21)
-* [`https://sundareshsankaran.substack.com/p/finding-goldilocks-too-broad-tools`](https://sundareshsankaran.substack.com/p/finding-goldilocks-too-broad-tools) (Substack version in case you run into paywall issues on ai.plainenglish.io)
-* [`https://www.youtube.com/watch?v=AVHUgFPfyBQ`](https://www.youtube.com/watch?v=AVHUgFPfyBQ)
 
 
 ## Contact
