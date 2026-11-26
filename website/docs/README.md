@@ -1,27 +1,39 @@
-# SAS Micro Analytic Service (MAS) - Model Context Protocol (MCP) Tool Maker
- 
-## mas-mcp-toolmaker
+# Build custom MCP servers for your SAS Viya decisions and models
 
+:::info
 > 📢 
 > *A Model Context Protocol (MCP) Server Script for your SAS Viya Micro Analytic Service (MAS) modules.*
+> <mark> Python package at: https://pypi.org/project/mas-mcp-toolmaker/ </mark>
+:::
 
 The Python package in this repository generates a Model Context Protocol (MCP) server script to execute published [SAS Micro Analytic Services (MAS)](https://support.sas.com/en/software/micro-analytic-service-support.html) modules. 
 
-### But, Why?
+SAS Viya applications like SAS Intelligent Decisioning, SAS Model Manager and SAS Visual Machine Learning use MAS as a publishing destination to serve models, decisions and other programming logic through REST APIs.
 
-MCP tools can bloat your agents pretty quickly. You need specialist, relevant tools which you can pick and choose as per need. `mas-mcp-toolmaker` helps you do this.  This package is a convenient way to interface with a SAS Viya environment using Model Context Protocol (MCP).  
+### Why?
 
+MCP tools can bloat your agents pretty quickly. 
+
+You need specialised and relevant tools which you can pick and choose as per need. `mas-mcp-toolmaker` helps you do this.  This package is a convenient way to interface with a SAS Viya environment using Model Context Protocol (MCP).  
+
+:::tip
 > 📢 
 > Read this 
 [article](https://ai.plainenglish.io/finding-goldilocks-too-broad-tools-too-many-tools-optimising-your-mcp-server-b108c3072d21) to learn more.
 > Also watch this [video](https://players.brightcove.net/3665946608001/default_default/index.html?videoId=6399384694112).
+:::
 
-The output Python script comes with a choice of two flavours - an MCP server served through stdio, or a format customised for [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.html). A third Streamable HTTP version is planned.
+## MCP Server Options
+The MCP server is presented as a Python script oriented for two platforms 
 
-<mark> Python package at: https://pypi.org/project/mas-mcp-toolmaker/ </mark>
+1. Standard Input/Output (stdio)
+2. A format customised for [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.html).
 
+A Streamable HTTP version is planned.
+
+:::note
 A wiki of this repo has been generated using DeepWiki and is available here: [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/SundareshSankaran/mas-mcp-toolmaker)
-
+:::
 
 ### Prerequisites
 
@@ -44,12 +56,12 @@ A sample [.env](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/sampl
 
 ## Installation
 
-1. While not mandatory, we recommended standing up a virtual environment before installing this package.  A convenient shell script [`build.sh`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/build.sh) is provided for this purpose.  Refer this [repository](https://github.com/SundareshSankaran/build-script) for a starter build script.  Also read this [article](https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674) for more details.
-
-2. The simplest way is to pip install this package from pypi.org
+1. The simplest way is to pip install this package from pypi.org
 ```
 pip install mas-mcp-toolmaker
 ```
+
+2. While not mandatory, we recommended standing up a virtual environment before installing this package.  A convenient shell script [`build.sh`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/build.sh) is provided for this purpose.  Refer this [repository](https://github.com/SundareshSankaran/build-script) for a starter build script.  Also read this [article](https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674) for more details.
 
 3. In case you would like to perform a local install,
 ```
