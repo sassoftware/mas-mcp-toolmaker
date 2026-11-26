@@ -40,7 +40,7 @@ A Streamable HTTP version is planned.
 A wiki of this repo has been generated using DeepWiki and is available here: [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/SundareshSankaran/mas-mcp-toolmaker)
 :::
 
-### Prerequisites
+## Prerequisites
 
 1. Package requirements: Python 3.12 or later
 
@@ -85,7 +85,7 @@ pip install -e .
 For those who would like to use this repository in Visual Studio Code, the [`.vscode`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) every time you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
 
 
-### Getting Started
+## Getting Started
 
 Run the following example notebook: [`mas-mcp-toolmaker.ipynb`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/mas-mcp-toolmaker.ipynb).
 
@@ -97,7 +97,7 @@ jupyter-lab
 ```
 
 
-### Operations
+## Usage
 
 Using this package is very simple.  At a fundamental level, there are two operations involved. 
 
