@@ -1,11 +1,12 @@
 ## Installation
 
-1. While not mandatory, we recommended standing up a virtual environment before installing this package.  A convenient shell script [`build.sh`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/build.sh) is provided for this purpose.  Refer this [repository](https://github.com/SundareshSankaran/build-script) for a starter build script.  Also read this [article](https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674) for more details.
-
-2. The simplest way is to pip install this package from pypi.org
+1. The simplest way is to pip install this package from pypi.org
 ```
 pip install mas-mcp-toolmaker
 ```
+
+2. While not mandatory, we recommended standing up a virtual environment before installing this package.  A convenient shell script [`build.sh`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/build/build.sh) is provided for this purpose.  Refer this [repository](https://github.com/SundareshSankaran/build-script) for a starter build script.  Also read this [article](https://communities.sas.com/t5/SAS-Communities-Library/My-Build-Script-in-Visual-Studio-Code-An-Automation-Pattern/ta-p/988674) for more details.
+
 
 3. In case you would like to perform a local install,
 ```
