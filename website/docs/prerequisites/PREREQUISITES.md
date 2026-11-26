@@ -12,6 +12,6 @@ VIYA_HOST =
 VIYA_ACCESS_TOKEN = 
 ```
 
-A sample [.env](./sample.env) is also provided.
+A sample [.env](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/sample.env) is also provided.
 
 4. (Optional) A [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.html) deployment if you want to run the RAM flavour of the MCP server script.
