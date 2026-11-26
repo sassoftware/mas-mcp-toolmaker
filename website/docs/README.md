@@ -37,7 +37,7 @@ VIYA_HOST =
 VIYA_ACCESS_TOKEN = 
 ```
 
-A sample [.env](./sample.env) is also provided.
+A sample [.env](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/sample.env) is also provided.
 
 4. (Optional) A [SAS Retrieval Agent Manager (RAM)](https://www.sas.com/en_us/software/retrieval-agent-manager.html) deployment if you want to run the RAM flavour of the MCP server script.
 
@@ -65,7 +65,7 @@ pip install -e .
 
 #### Note: Maintenance utility for VS Code users
 
-For those who would like to use this repository in Visual Studio Code, the [`.vscode`](./.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) everytime you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
+For those who would like to use this repository in Visual Studio Code, the [`.vscode`](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/.vscode) directory in this repo contains some automated tasks which perform cleanup of old artifacts (previous virtual environment directories, for example) every time you reopen the repository.  Remove this directory in case you do not want the automated task to run. 
 
 
 ### Getting Started
@@ -119,7 +119,7 @@ However, you are free to ask for a feature or raise bugs using the [Issues](http
 
 ## License
 
-This project is licensed under the [Apache 2.0 License](LICENSE).
+This project is licensed under the [Apache 2.0 License](https://github.com/sassoftware/mas-mcp-toolmaker/blob/main/LICENSE).
 
 Python packages may contain dependencies on other third-party packages which are governed by their own licenses. 
 
